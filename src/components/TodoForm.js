@@ -11,10 +11,9 @@ class TodoForm extends React.Component {
     //class property to submit form
 
     render(){
-        console.log("Adding new item")
+        console.log("rendering form")
         return (
             <form>
-                <h1>My To Do List:</h1>
                 <input name="item" placeholder="Add item" />
                 <button>Add</button>
             </form>

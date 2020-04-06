@@ -1,6 +1,6 @@
 import React from "react"
 
-const Item = props => {
+const Todo = props => {
     return (
         <div className={`item${props.item.complete ? ' complete' : ''}`}>
             <p>{props.item.name}</p>
@@ -8,4 +8,4 @@ const Item = props => {
     )
 }
 
-export default Item
+export default Todo

@@ -7,17 +7,17 @@ const items = [
   {
     name: "Do the dishes",
     complete: false,
-    id: Date.now()
+    id: 1234
   },
   {
     name: "Vacuum",
     complete: false,
-    id: Date.now()
+    id: 1223
   },
   {
-    name: "Sort and do laundry",
+    name: "Sort the laundry",
     complete: false,
-    id: Date.now()
+    id: 1141
   }
 ]
 
@@ -28,7 +28,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div><TodoForm/></div>
+        <div>
+          <h1>My To Do List:</h1>
+          <TodoForm/>
+        </div>
         <TodoList items={items} />
       </div>
     );

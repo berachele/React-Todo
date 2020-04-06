@@ -4,11 +4,13 @@ import React from "react"
 import Todo from "./Todo"
 
 const TodoList = props => {
-    
-    resturn (
+
+    return (
         <div>
-            {/* map through Todo to show the item */}
-            <button>Remove Finished Items</button>
+            {props.items.map(item => {
+                return <Todo key={item.id} item={item} />
+            })}
+            <button onClick={props.clearPurchased}>Remove Finished Items</button>
         </div>
     )
 }
