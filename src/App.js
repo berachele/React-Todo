@@ -79,7 +79,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <div>
           <h1>My To Do List:</h1>
           <TodoForm addNewItem={this.addNewItem}/>
