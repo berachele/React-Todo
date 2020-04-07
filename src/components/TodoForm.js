@@ -11,17 +11,22 @@ class TodoForm extends React.Component {
 
     handlesChanges = e => {
         //update state with each keystroke
+        e.preventDefault()
         this.setState({
-            name: e.target.value
+            newItem: e.target.value
         })
     }
 
     //class property to submit form
+    submitForm = e => {
+        e.preventDefault()
+        this.props.addNewItem(this.state.newItem)
+    }
 
     render(){
         console.log("rendering form")
         return (
-            <form>
+            <form onSubmit={this.submitForm}>
                 <input name="name" 
                 placeholder="Add item" 
                 value={this.state.name} 

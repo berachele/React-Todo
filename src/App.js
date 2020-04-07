@@ -55,6 +55,17 @@ class App extends React.Component {
     this.setState({
       itemList: newItemList
     })
+  }//end of toggle
+
+  addNewItem = itemText => {
+    const newItem = {
+      name: itemText,
+      complete: false,
+      id: Date.now()
+    }
+    this.setState({
+      itemList: [...this.state.itemList, newItem]
+    })
   }
 
   render() {
@@ -62,7 +73,7 @@ class App extends React.Component {
       <div>
         <div>
           <h1>My To Do List:</h1>
-          <TodoForm/>
+          <TodoForm addNewItem={this.addNewItem}/>
         </div>
         <TodoList items={this.state.itemList} toggleItem={this.toggleItem} />
       </div>
