@@ -1,23 +1,24 @@
 import React from 'react';
 import TodoForm from "./components/TodoForm"
 import TodoList from "./components/TodoList"
+import "./components/Todo.css"
 
 
 const items = [
   {
     name: "Do the dishes",
     complete: false,
-    id: Date.now()
+    id: 1234
   },
   {
     name: "Vacuum",
     complete: false,
-    id: Date.now()
+    id: 1235
   },
   {
     name: "Sort the laundry",
     complete: false,
-    id: Date.now()
+    id: 1236
   }
 ]
 
@@ -68,6 +69,14 @@ class App extends React.Component {
     })
   }
 
+  clearFinished = e => {
+    e.preventDefault();
+    //if item is complete (item.complete is true) then filter out
+    this.setState({
+      itemList: this.state.itemList.filter(item => !item.complete)
+    })
+  }
+
   render() {
     return (
       <div>
@@ -75,7 +84,7 @@ class App extends React.Component {
           <h1>My To Do List:</h1>
           <TodoForm addNewItem={this.addNewItem}/>
         </div>
-        <TodoList items={this.state.itemList} toggleItem={this.toggleItem} />
+        <TodoList items={this.state.itemList} toggleItem={this.toggleItem} clearFinished={this.clearFinished} />
       </div>
     );
   }
