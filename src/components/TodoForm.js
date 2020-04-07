@@ -2,10 +2,18 @@ import React from "react"
 
 class TodoForm extends React.Component {
     //constructor with state
-    
+    constructor(){
+        super()
+        this.state = {
+            name: ""
+        }
+    }
 
-    handlesChanged = e => {
+    handlesChanges = e => {
         //update state with each keystroke
+        this.setState({
+            name: e.target.value
+        })
     }
 
     //class property to submit form
@@ -14,7 +22,10 @@ class TodoForm extends React.Component {
         console.log("rendering form")
         return (
             <form>
-                <input name="item" placeholder="Add item" />
+                <input name="name" 
+                placeholder="Add item" 
+                value={this.state.name} 
+                onChange={this.handlesChanges}/>
                 <button>Add</button>
             </form>
         )
