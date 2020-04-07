@@ -29,7 +29,7 @@ class TodoForm extends React.Component {
             <form onSubmit={this.submitForm}>
                 <input name="name" 
                 placeholder="Add item" 
-                value={this.state.name} 
+                value={this.state.newItem} 
                 onChange={this.handlesChanges}/>
                 <button>Add</button>
             </form>
