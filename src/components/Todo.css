@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+
+*{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    background-color: #d8e4fe;
+}
+.App{
+    border: 1px dashed #0070c6;
+    padding: 0 2%;
+    width: 40%;
+}
+
+h1, div, button, ::placeholder {
+    color: #bd5574;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    font-family: "Comic Neue", cursive;
+    margin: 8px 0
+}
+h1{
+    font-size: 3rem;
+}
+p{
+    color: white;
+    font-size: 2rem;
+}
+.item{
+    background-color: #6b303c;
+    width: 100%;
+    text-align: left;
+    padding: 2px;
+}
+.item.complete {
+  background-color: #86525e;
+  text-decoration: line-through;
+  text-decoration-color: #d8e4fe;
+}
+button{
+    font-size: 1.6rem;
+    height: 40px;
+    width: 60px;
+    border-radius: 5px;
+    margin-left: 35px;
+    background-color: white;
+    color: #0070c6;
+}
+button :hover{
+    background-color: #0070c6;
+    color: white;
+}
+.clear-btn{
+    width: 100px;
+    height: 70px;
+    margin-left: 0;
+}
+input{
+    width: 70%;
+    height: 35px;
+}
